@@ -1,0 +1,6 @@
+Hey Google, turn on the living room lamp|livingroomlamp_on.mp3|1800
+Hey Google, turn off the living room lamp|livingroomlamp_off.mp3|1800
+Hey Google, what is the weather?|weather.mp3|500
+Hey Google, tell me a joke|joke.mp3|300
+Hey Google, turn on the bedroom lamp|bedroomlamp_on.mp3|1800
+Hey Google, turn off the bedroom lamp|bedroomlamp_off.mp3|1800
