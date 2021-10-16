@@ -126,6 +126,7 @@ def main_loop():
 
 	check_and_download()
 	import_and_queue()
+	os.chdir("audio")
 
 	print("Startup process complete, starting the audio queue")
 	# print("For a list of commands, type 'help'")
