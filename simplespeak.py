@@ -1,18 +1,14 @@
-from playsound import playsound
 import random
 import gtts
-from datetime import datetime
-from datetime import timedelta
-from time import sleep
 import os
-from collections import deque
 import math
 import copy
-from threading import Thread
+from datetime import datetime, timedelta
+from playsound import playsound
+from time import sleep
+from collections import deque
 
 AUDIO_QUEUE = deque()
-#RUN_QUEUE = True
-#REMAINING_TIME = 0
 RUN_MAIN = True
 
 def download_audio(text, filename):
@@ -141,10 +137,14 @@ def main_loop():
 
 		if len(AUDIO_QUEUE) == 0:
 			print("Empty queue, requeuing...")
+			os.chdir("..")
 			import_and_queue()
+			os.chdir("audio")
 		elif len(AUDIO_QUEUE) < 3:
 			print("Queue almost empty (< 3 items left), requeuing...")
+			os.chdir("..")
 			import_and_queue()
+			os.chdir("audio")
 		elif next_scheduled_time > datetime.now():
 			sleep(1)
 		else:
